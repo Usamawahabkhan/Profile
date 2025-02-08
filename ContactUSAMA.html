@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download vCard</title>
+</head>
+<body>
+    <h1>Save Contact</h1>
+    <button id="downloadBtn">Download vCard</button>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const vCardData = [
+                "BEGIN:VCARD",
+                "VERSION:3.0",
+                "FN:Usama Wahab Khan",
+                "TEL;TYPE=MOBILE:+971 55 366 1755",
+                "EMAIL:ukhan@evolutiontech.ae",
+                "URL:http://www.evolutiontech.ae",
+                "X-SOCIALPROFILE;TYPE=twitter:@usamawahabkhan",
+                "X-SOCIALPROFILE;TYPE=linkedin:usamawahabkhan",
+                "END:VCARD"
+            ].join("\n");
+
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'contact.vcf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+</html>
