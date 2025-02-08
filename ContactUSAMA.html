@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Card</title>
     <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #e0e0e0;
+            background: linear-gradient(135deg, #6b8df6, #b0c4de);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,6 +52,15 @@
             top: 15px;
             right: 15px;
         }
+        .social-icons a {
+            margin: 0 10px;
+            color: #555;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
         .download-btn {
             background-color: #007bff;
             color: #fff;
@@ -73,10 +83,12 @@
         <p>Phone: +971 55 366 1755</p>
         <p>Email: <a href="mailto:ukhan@evolutiontech.ae">ukhan@evolutiontech.ae</a></p>
         <p>Website: <a href="http://www.evolutiontech.ae" target="_blank">www.evolutiontech.ae</a></p>
-        <p>WhatsApp: <a href="https://wa.me/971553661755" target="_blank">Chat on WhatsApp</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/usamawahabkhan" target="_blank">usamawahabkhan</a></p>
-        <p>Blog: <a href="https://www.yourblog.com" target="_blank">Your Blog</a></p>
-        <p>GitHub: <a href="https://github.com/usamawahabkhan" target="_blank">github.com/usamawahabkhan</a></p>
+        <div class="social-icons">
+            <a href="https://wa.me/971553661755" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/usamawahabkhan" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.yourblog.com" target="_blank" title="Blog"><i class="fas fa-blog"></i></a>
+            <a href="https://github.com/usamawahabkhan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
         <img src="LOGOSMALL.png" alt="Evolution Technologies Logo" class="logo">
         <button id="downloadBtn" class="download-btn">Download vCard</button>
     </div>
