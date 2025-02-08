@@ -4,10 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download vCard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .card h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .card p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .logo {
+            width: 100px;
+            margin-top: 20px;
+        }
+        .download-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Save Contact</h1>
-    <button id="downloadBtn">Download vCard</button>
+    <div class="card">
+        <img src="photo.png" alt="Profile Photo">
+        <h1>Usama Wahab Khan</h1>
+        <p>Phone: +971 55 366 1755</p>
+        <p>Email: ukhan@evolutiontech.ae</p>
+        <p><a href="http://www.evolutiontech.ae">www.evolutiontech.ae</a></p>
+        <img src="evolution-logo.png" alt="Evolution Technologies Logo" class="logo">
+        <button id="downloadBtn" class="download-btn">Download vCard</button>
+    </div>
 
     <script>
         document.getElementById('downloadBtn').addEventListener('click', function() {
