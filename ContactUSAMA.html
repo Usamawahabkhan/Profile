@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download vCard</title>
+    <title>Contact Card</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            background-color: #e0e0e0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,27 +17,39 @@
         .card {
             background-color: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
-            width: 300px;
+            width: 350px;
+            position: relative;
         }
-        .card img {
+        .card img.profile {
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
         }
         .card h1 {
             font-size: 24px;
-            margin: 10px 0;
+            margin: 15px 0 10px;
         }
         .card p {
-            margin: 5px 0;
+            margin: 8px 0;
             color: #555;
+            font-size: 16px;
+        }
+        .card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .card a:hover {
+            text-decoration: underline;
         }
         .logo {
-            width: 100px;
-            margin-top: 20px;
+            width: 80px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
         }
         .download-btn {
             background-color: #007bff;
@@ -56,12 +68,16 @@
 </head>
 <body>
     <div class="card">
-        <img src="photo.png" alt="Profile Photo">
+        <img src="e8ae3684-dcbd-4d38-9b05-072da1dda527.jpeg" alt="Profile Photo" class="profile">
         <h1>Usama Wahab Khan</h1>
         <p>Phone: +971 55 366 1755</p>
-        <p>Email: ukhan@evolutiontech.ae</p>
-        <p><a href="http://www.evolutiontech.ae">www.evolutiontech.ae</a></p>
-        <img src="evolution-logo.png" alt="Evolution Technologies Logo" class="logo">
+        <p>Email: <a href="mailto:ukhan@evolutiontech.ae">ukhan@evolutiontech.ae</a></p>
+        <p>Website: <a href="http://www.evolutiontech.ae" target="_blank">www.evolutiontech.ae</a></p>
+        <p>WhatsApp: <a href="https://wa.me/971553661755" target="_blank">Chat on WhatsApp</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/usamawahabkhan" target="_blank">usamawahabkhan</a></p>
+        <p>Blog: <a href="https://www.yourblog.com" target="_blank">Your Blog</a></p>
+        <p>GitHub: <a href="https://github.com/usamawahabkhan" target="_blank">github.com/usamawahabkhan</a></p>
+        <img src="LOGOSMALL.png" alt="Evolution Technologies Logo" class="logo">
         <button id="downloadBtn" class="download-btn">Download vCard</button>
     </div>
 
@@ -75,7 +91,10 @@
                 "EMAIL:ukhan@evolutiontech.ae",
                 "URL:http://www.evolutiontech.ae",
                 "X-SOCIALPROFILE;TYPE=twitter:@usamawahabkhan",
-                "X-SOCIALPROFILE;TYPE=linkedin:usamawahabkhan",
+                "X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/usamawahabkhan",
+                "X-SOCIALPROFILE;TYPE=whatsapp:https://wa.me/971553661755",
+                "X-SOCIALPROFILE;TYPE=blog:https://www.yourblog.com",
+                "X-SOCIALPROFILE;TYPE=github:https://github.com/usamawahabkhan",
                 "END:VCARD"
             ].join("\n");
 
